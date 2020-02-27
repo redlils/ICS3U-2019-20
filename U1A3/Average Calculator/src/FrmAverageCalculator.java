@@ -1,3 +1,5 @@
+import me.Kaleb.NumberUtils;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -55,7 +57,7 @@ public class FrmAverageCalculator {
       
 //      Calculate average
       average /= grades.length;
-      average = round(average, 1);
+      average = NumberUtils.round(average, 1);
       
       lblGradeAverage.setText("Average: " + average); // Make average label reflect calculated average
     });
@@ -71,14 +73,5 @@ public class FrmAverageCalculator {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();
     frame.setVisible(true);
-  }
-  
-//  Helper function for rounding
-  private double round(double numberToRound, @SuppressWarnings("SameParameterValue") int decimalPlaces) {
-    double roundedNumber = numberToRound * Math.pow(10, decimalPlaces);
-    roundedNumber = Math.round(roundedNumber);
-    roundedNumber /= Math.pow(10, decimalPlaces);
-    
-    return roundedNumber;
   }
 }

@@ -1,25 +1,33 @@
 package me.Kaleb;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class MainClass {
   
-  public static double discount = 0;
+  public static double discount = 0; // Initialize discount with default value (using decimals for easier math)
   
   public static void main(String[] args) {
+  
 //    Create scanner and ask for user input
     Scanner reader = new Scanner(System.in);
     System.out.println("Welcome to the discount calculator!");
     System.out.print("Please enter the amount that you have spent: $");
-//    Ensure that next input is a double
+    
+//    Ensure that the user inputs a double
     while (!reader.hasNextDouble()) {
       System.out.println("The amount you have entered is invalid!");
       System.out.print("Please enter the amount that you have spent: $");
       reader.next();
     }
     
-    double amountSpent = round(reader.nextDouble(), 2); // Get amount spent from input
+//    Get amount spent from input, round it, and store it in a variable
+    double amountSpent = round(reader.nextDouble(), 2);
+    
+//    Check if user has spent anything
+    if (amountSpent == 0 || amountSpent < 0) {
+      System.out.println("You have spent nothing, therefore you receive no discount!");
+      return;
+    }
     
 //    Set discount based off of amount spent
     if (amountSpent >= 120) {
@@ -28,11 +36,8 @@ public class MainClass {
       discount = .30;
     } else if (amountSpent > 40) {
       discount = .20;
-    } else if (amountSpent > 0) {
-      discount = .10;
     } else {
-      System.out.println("You have spent nothing, therefore you receive no discount!");
-      return;
+      discount = .10;
     }
     
 //    Tell user what their discount is, as well as new total
@@ -45,5 +50,4 @@ public class MainClass {
   private static double round(double numberToRound, int decimalPlaces) {
     return (Math.round(numberToRound * Math.pow(10, decimalPlaces))) / Math.pow(10, decimalPlaces);
   }
-  
 }

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/U1A1/AboutMeRedpath/AboutMeRedpath.iml" filepath="$PROJECT_DIR$/U1A1/AboutMeRedpath/AboutMeRedpath.iml" />
       <module fileurl="file://$PROJECT_DIR$/Helpers/Helpers.iml" filepath="$PROJECT_DIR$/Helpers/Helpers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" filepath="$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" />
       <module fileurl="file://$PROJECT_DIR$/Orientation/Orientation.iml" filepath="$PROJECT_DIR$/Orientation/Orientation.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A1/U1A1.iml" filepath="$PROJECT_DIR$/U1A1/U1A1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1A1/AboutMeRedpath/U1A1.AboutMeRedpath.iml" filepath="$PROJECT_DIR$/U1A1/AboutMeRedpath/U1A1.AboutMeRedpath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1A2/First Few Programs/U1A2.First Few Programs.iml" filepath="$PROJECT_DIR$/U1A2/First Few Programs/U1A2.First Few Programs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1A2/Solving Math Problems/U1A2.Solving Math Problems.iml" filepath="$PROJECT_DIR$/U1A2/Solving Math Problems/U1A2.Solving Math Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1A2/Variables and Variable Types/U1A2.Variables and Variable Types.iml" filepath="$PROJECT_DIR$/U1A2/Variables and Variable Types/U1A2.Variables and Variable Types.iml" />
     </modules>
   </component>
 </project>

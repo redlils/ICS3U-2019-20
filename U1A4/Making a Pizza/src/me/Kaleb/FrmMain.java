@@ -27,8 +27,10 @@ public class FrmMain {
   }
   
 //  Main function
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+//    Generate GUI
     JFrame frame = new JFrame("Putrid Pizza");
+    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     frame.setContentPane(new FrmMain().panelMain);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();

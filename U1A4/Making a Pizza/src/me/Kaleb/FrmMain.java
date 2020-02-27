@@ -64,10 +64,10 @@ public class FrmMain {
       lblFunMessage.setText("");
     
 //    Calculate and display subtotal, taxes, and grand total
-    double subtotal = round((diameter * CHARGE_PER_CM) + PIZZA_CHARGE + RENT_CHARGE, 2);
+    double subtotal = NumberUtils.round((diameter * CHARGE_PER_CM) + PIZZA_CHARGE + RENT_CHARGE, 2);
     lblSubtotal.setText(String.format("$%s", subtotal));
     
-    double taxes = round(subtotal * TAX, 2);
+    double taxes = NumberUtils.round(subtotal * TAX, 2);
     lblTaxes.setText(String.format("$%s", taxes));
   
     lblTotal.setText(String.format("$%s", subtotal + taxes));
@@ -81,12 +81,5 @@ public class FrmMain {
     final static double TAX = 0.13;
     
     final static String INVALID_DIAMETER = "The diameter that you have entered is invalid! Please check your diameter and try again!";
-  }
-  
-//  Round function
-// TODO: 2020-02-27 Remove when features/helpers is merged in favour of NumberUtils#round
-  @Deprecated
-  private static double round(double numberToRound, int decimalPlaces) {
-    return Math.round(Math.pow(10, decimalPlaces) * numberToRound) / Math.pow(10, decimalPlaces);
   }
 }

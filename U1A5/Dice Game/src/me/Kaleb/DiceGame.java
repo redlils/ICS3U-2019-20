@@ -34,6 +34,11 @@ public class DiceGame {
   private static JLabel lblPercentageValue;
   //endregion
   
+  //region Counters
+  int diceRolls;
+  int correctGuesses;
+  //endregion
+  
 //  Register listeners
   public DiceGame() {
     btnRoll.addActionListener(DiceGame::rollButtonClicked);

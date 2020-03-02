@@ -51,6 +51,17 @@ public class DiceGame {
   
 //  Runs when roll button is clicked
   private static void rollButtonClicked(ActionEvent actionEvent) {
-
+//    Verify that guess is valid
+    int guess;
+    try {
+      guess = Integer.parseInt(txtGuess.getText());
+    } catch (NumberFormatException e) {
+      JOptionPane.showMessageDialog(pnlMain, " Your guess is invalid, please try again!", "Invalid Guess", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+    if (guess < 1 || guess > 6) {
+      JOptionPane.showMessageDialog(pnlMain, " Your guess is invalid, please try again!", "Invalid Guess", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
   }
 }

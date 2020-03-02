@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Helpers/Helpers.iml" filepath="$PROJECT_DIR$/Helpers/Helpers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" filepath="$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Orientation/Orientation.iml" filepath="$PROJECT_DIR$/Orientation/Orientation.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" filepath="$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A2/First Few Programs/U1.A2.First Few Programs.iml" filepath="$PROJECT_DIR$/U1A2/First Few Programs/U1.A2.First Few Programs.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A2/Solving Math Problems/U1.A2.Solving Math Problems.iml" filepath="$PROJECT_DIR$/U1A2/Solving Math Problems/U1.A2.Solving Math Problems.iml" />

@@ -9,29 +9,29 @@ import java.awt.event.ActionEvent;
 
 public class DiceGame {
   //region Auto-generated GUI variables
-  private static JPanel pnlMain; // Main panel
+  private JPanel pnlMain; // Main panel
   
 //  Title and instruction labels
-  private static JLabel lblTitle;
-  private static JLabel lblInst1;
-  private static JLabel lblInst2;
+  private JLabel lblTitle;
+  private JLabel lblInst1;
+  private JLabel lblInst2;
   
 //  User-input variables
-  private static JLabel lblGuess;
-  private static JFormattedTextField txtGuess;
-  private static JLabel lblRoll;
-  private static JButton btnRoll;
-  private static JLabel lblRollResult;
+  private JLabel lblGuess;
+  private JFormattedTextField txtGuess;
+  private JLabel lblRoll;
+  private JButton btnRoll;
+  private JLabel lblRollResult;
   
 //  Extra information
-  private static JLabel lblRolls;
-  private static JLabel lblRollsValue;
-  private static JLabel lblCorrect;
-  private static JLabel lblCorrectValue;
-  private static JLabel lblIncorrect;
-  private static JLabel lblIncorrectValue;
-  private static JLabel lblPercentage;
-  private static JLabel lblPercentageValue;
+  private JLabel lblRolls;
+  private JLabel lblRollsValue;
+  private JLabel lblCorrect;
+  private JLabel lblCorrectValue;
+  private JLabel lblIncorrect;
+  private JLabel lblIncorrectValue;
+  private JLabel lblPercentage;
+  private JLabel lblPercentageValue;
   //endregion
   
   //region Counters
@@ -41,7 +41,7 @@ public class DiceGame {
   
 //  Register listeners
   public DiceGame() {
-    btnRoll.addActionListener(DiceGame::rollButtonClicked);
+    btnRoll.addActionListener(this::rollButtonClicked);
   }
   
 //  Main function to load GUI
@@ -55,7 +55,7 @@ public class DiceGame {
   }
   
 //  Runs when roll button is clicked
-  private static void rollButtonClicked(ActionEvent actionEvent) {
+  private void rollButtonClicked(ActionEvent actionEvent) {
 //    Verify that guess is valid
     int guess;
     try {

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class MultipleChoiceQuiz {
+  
   //<editor-fold desc="Auto-generated GUI components">
   private JPanel pnlMain; // Main panel
   private JTabbedPane tbPnlMain; // Tab panel
@@ -30,6 +31,8 @@ public class MultipleChoiceQuiz {
   private JPanel pnlQuestion5;
   private JTextField txtAnswer5;
   private JLabel lblQuestionResult5;
+  
+  private JScrollPane scrlMain;
   //</editor-fold>
   
   //<editor-fold desc="Results">
@@ -56,6 +59,8 @@ public class MultipleChoiceQuiz {
   
   public MultipleChoiceQuiz() {
     btnSubmit.addActionListener(this::submitButtonClicked);
+    
+    scrlMain.getVerticalScrollBar().setUnitIncrement(10);
   }
   
   public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {

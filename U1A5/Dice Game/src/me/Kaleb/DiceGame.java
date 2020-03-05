@@ -57,37 +57,27 @@ public class DiceGame {
     frame.setVisible(true);
   }
   
-  //  Runs when roll button is clicked
+//  Runs when roll button is clicked
   private void rollButtonClicked(ActionEvent actionEvent) {
 //    Verify that guess is valid
     int guess = verifyGuess();
     if (guess == -1) return;
-    
-    diceRolls += 1; // Add roll to counter
-    
-//    Roll die
-    int roll = new Random(System.currentTimeMillis()).nextInt(6) + 1; // Use System.currentTimeMillis() as seed for random generation
-    
-//    Add to correct guess if guess was correct
-    if (roll == guess) correctGuesses++;
-    
-//    Calculate and set labels with correct values
-//    Use variable + "" to convert to string
-    // TODO: 2020-03-02 Change variable + "" to String.valueOf
-    lblRollResult.setText(roll + "");
-    lblCorrectValue.setText(correctGuesses + "");
-    lblIncorrectValue.setText(diceRolls - correctGuesses + "");
-    lblRollsValue.setText(diceRolls + "");
-    lblAccuracyValue.setText(NumberUtils.round((double) correctGuesses / diceRolls * 100, 2) + "%");
+  
+    roll(1, guess);
   }
   
-//  Allow for multiple rolls at once with one guess
+//    Allow for multiple rolls at once with one guess
   private void multipleRollClicked(ActionEvent actionEvent) {
-    //    Verify that guess is valid
+//    Verify that guess is valid
     int guess = verifyGuess();
     if (guess == -1) return;
+  
+//    Ask user for amount of dice to roll
+    String diceToRollRaw = JOptionPane.showInputDialog(pnlMain, "Please enter the amount of dice that you would like to roll at once", "Roll Dice", JOptionPane.QUESTION_MESSAGE);
+    int diceToRoll = Integer.parseInt(diceToRollRaw);
     
-    
+//    Roll
+    roll(diceToRoll, guess);
   }
   
   private int verifyGuess() {
@@ -103,5 +93,31 @@ public class DiceGame {
       return -1;
     }
     return guess;
+  }
+  
+//  Helper function for rolling dice
+  private void roll(int diceToRoll, int guess) {
+    int lastRoll = 0;
+    
+    for (int currentRoll = 1; currentRoll <= diceToRoll; currentRoll++) {
+      diceRolls += 1; // Add roll to counter
+
+      long seed = diceRolls * (correctGuesses + guess) * currentRoll;
+      
+//    Roll die
+      lastRoll = new Random(seed).nextInt(6) + 1;  // Use variables for seed
+  
+      System.out.println("Seed = " + seed);
+      System.out.println("lastRoll = " + lastRoll);
+      
+//    Add to correct guess if guess was correct
+      if (lastRoll == guess) correctGuesses++;
+    }
+    
+    lblRollResult.setText(lastRoll + "");
+    lblCorrectValue.setText(correctGuesses + "");
+    lblIncorrectValue.setText(diceRolls - correctGuesses + "");
+    lblRollsValue.setText(diceRolls + "");
+    lblAccuracyValue.setText(NumberUtils.round((double) correctGuesses / diceRolls * 100, 2) + "%");
   }
 }

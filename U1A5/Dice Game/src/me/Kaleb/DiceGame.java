@@ -71,10 +71,23 @@ public class DiceGame {
 //    Verify that guess is valid
     int guess = verifyGuess();
     if (guess == -1) return;
-  
-//    Ask user for amount of dice to roll
-    String diceToRollRaw = JOptionPane.showInputDialog(pnlMain, "Please enter the amount of dice that you would like to roll at once", "Roll Dice", JOptionPane.QUESTION_MESSAGE);
-    int diceToRoll = Integer.parseInt(diceToRollRaw);
+    int diceToRoll = 0;
+    
+//    Validate amount of dice entered
+    while (true) {
+      String diceToRollRaw = JOptionPane.showInputDialog(pnlMain, "Please enter the amount of dice that you would like to roll at once", "Roll Dice", JOptionPane.QUESTION_MESSAGE);
+      try {
+        diceToRoll = Integer.parseInt(diceToRollRaw);
+      } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(pnlMain, "The amount of dice you have entered is invalid! Please try again!", "Dice Invalid", JOptionPane.ERROR_MESSAGE);
+        continue;
+      }
+      if (diceToRoll <= 0) {
+        JOptionPane.showMessageDialog(pnlMain, "The amount of dice you have entered is invalid! Please try again!", "Dice Invalid", JOptionPane.ERROR_MESSAGE);
+        continue;
+      }
+      break;
+    }
     
 //    Roll
     roll(diceToRoll, guess);
@@ -102,10 +115,10 @@ public class DiceGame {
     for (int currentRoll = 1; currentRoll <= diceToRoll; currentRoll++) {
       diceRolls += 1; // Add roll to counter
 
-      long seed = diceRolls * (correctGuesses + guess) * currentRoll;
+      long seed = diceRolls * (correctGuesses + guess) * currentRoll; // Seed for random generation
       
 //    Roll die
-      lastRoll = new Random(seed).nextInt(6) + 1;  // Use variables for seed
+      lastRoll = new Random(seed).nextInt(6) + 1;
   
       System.out.println("Seed = " + seed);
       System.out.println("lastRoll = " + lastRoll);

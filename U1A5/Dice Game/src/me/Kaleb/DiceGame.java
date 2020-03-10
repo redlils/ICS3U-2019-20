@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.Random;
 
+import static me.Kaleb.NumberUtils.*;
+
 public class DiceGame {
   //region Auto-generated GUI variables
   private JPanel pnlMain; // Main panel
@@ -131,6 +133,6 @@ public class DiceGame {
     lblCorrectValue.setText(correctGuesses + "");
     lblIncorrectValue.setText(diceRolls - correctGuesses + "");
     lblRollsValue.setText(diceRolls + "");
-    lblAccuracyValue.setText(NumberUtils.round((double) correctGuesses / diceRolls * 100, 2) + "%");
+    lblAccuracyValue.setText(round((double) correctGuesses / diceRolls * 100, 2) + "%");
   }
 }

@@ -4,17 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Helpers/Helpers.iml" filepath="$PROJECT_DIR$/Helpers/Helpers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" filepath="$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Orientation/Orientation.iml" filepath="$PROJECT_DIR$/Orientation/Orientation.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" filepath="$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A2/First Few Programs/U1.A2.First Few Programs.iml" filepath="$PROJECT_DIR$/U1A2/First Few Programs/U1.A2.First Few Programs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A2/Solving Math Problems/U1.A2.Solving Math Problems.iml" filepath="$PROJECT_DIR$/U1A2/Solving Math Problems/U1.A2.Solving Math Problems.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A2/Variables and Variable Types/U1.A2.Variables and Variable Types.iml" filepath="$PROJECT_DIR$/U1A2/Variables and Variable Types/U1.A2.Variables and Variable Types.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A3/Average Calculator/U1.A3.Average Calculator.iml" filepath="$PROJECT_DIR$/U1A3/Average Calculator/U1.A3.Average Calculator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A3/Making Purchases/U1.A3.Making Purchases.iml" filepath="$PROJECT_DIR$/U1A3/Making Purchases/U1.A3.Making Purchases.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A4/First Selection Program/U1.A4.First Selection Program.iml" filepath="$PROJECT_DIR$/U1A4/First Selection Program/U1.A4.First Selection Program.iml" />
       <module fileurl="file://$PROJECT_DIR$/U1A4/Making a Pizza/U1.A4.Making a Pizza.iml" filepath="$PROJECT_DIR$/U1A4/Making a Pizza/U1.A4.Making a Pizza.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A5/Dice Game/U1.A5.Dice Game.iml" filepath="$PROJECT_DIR$/U1A5/Dice Game/U1.A5.Dice Game.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A5/Mutliple Choice Quiz/U1.A5.Mutliple Choice Quiz.iml" filepath="$PROJECT_DIR$/U1A5/Mutliple Choice Quiz/U1.A5.Mutliple Choice Quiz.iml" />
     </modules>
   </component>
 </project>

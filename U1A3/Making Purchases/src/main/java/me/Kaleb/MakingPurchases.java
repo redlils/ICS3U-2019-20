@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static me.Kaleb.MakingPurchases.Prices.*;
+import static me.Kaleb.NumberUtils.round;
 
 public class MakingPurchases {
 //  Auto-generated GUI variables
@@ -58,17 +59,19 @@ public class MakingPurchases {
     }
   
 //    Calculate costs
-    double usbCost = usbAmount * USB_PRICE;
-    double keyboardCost = keyboardAmount * KEYBOARD_PRICE;
-    double mouseCost = mouseAmount * MOUSE_PRICE;
-    double monitorCost = monitorAmount * MONITOR_PRICE;
-  
+//    round() function located in separate module (Helpers)
+//    Module accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers
+//    Function accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers/src/me/Kaleb/NumberUtils.java
+    double usbCost = round(usbAmount * USB_PRICE, 2);
+    double keyboardCost = round(keyboardAmount * KEYBOARD_PRICE, 2);
+    double mouseCost = round(mouseAmount * MOUSE_PRICE, 2);
+    double monitorCost = round(monitorAmount * MONITOR_PRICE, 2);
   
 //    Calculate subtotal, taxes, and grand total
     double subtotal = usbCost + keyboardCost + mouseCost + monitorCost;
     lblSubtotal.setText("$" + subtotal);
     
-    double taxes = subtotal * 0.13;
+    double taxes = round(subtotal * 0.13, 2);
     lblTaxes.setText("$" + taxes);
     
     double total = subtotal + taxes;

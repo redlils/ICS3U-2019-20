@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 import static me.Kaleb.FrmMain.Constants.*;
+import static me.Kaleb.NumberUtils.*;
 
 public class FrmMain {
 //  Auto-Generated form variables
@@ -64,10 +65,13 @@ public class FrmMain {
       lblFunMessage.setText("");
     
 //    Calculate and display subtotal, taxes, and grand total
-    double subtotal = NumberUtils.round((diameter * CHARGE_PER_CM) + PIZZA_CHARGE + RENT_CHARGE, 2);
+//    round() function located in separate module (Helpers)
+//    Module accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers
+//    Function accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers/src/me/Kaleb/NumberUtils.java
+    double subtotal = round((diameter * CHARGE_PER_CM) + PIZZA_CHARGE + RENT_CHARGE, 2);
     lblSubtotal.setText(String.format("$%s", subtotal));
     
-    double taxes = NumberUtils.round(subtotal * TAX, 2);
+    double taxes = round(subtotal * TAX, 2);
     lblTaxes.setText(String.format("$%s", taxes));
   
     lblTotal.setText(String.format("$%s", subtotal + taxes));

@@ -2,6 +2,8 @@ package me.Kaleb;
 
 import java.util.Scanner;
 
+import static me.Kaleb.NumberUtils.*;
+
 public class MainClass {
   
   public static double discount = 0; // Initialize discount with default value (using decimals for easier math)
@@ -21,6 +23,9 @@ public class MainClass {
     }
     
 //    Get amount spent from input, round it, and store it in a variable
+//    round() function located in separate module (Helpers)
+//    Module accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers
+//    Function accessible via GitHub: https://github.com/Kalcoder/ICS3U-2019-20/tree/master/Helpers/src/me/Kaleb/NumberUtils.java
     double amountSpent = round(reader.nextDouble(), 2);
     
 //    Check if user has spent anything
@@ -44,10 +49,5 @@ public class MainClass {
     System.out.println();
     System.out.println("You spent $" + amountSpent + ", so you save " + (discount * 100) + "% off of your purchase!");
     System.out.println("New total with discount: $" + round(amountSpent - (amountSpent * discount), 2));
-  }
-  
-//  Helper method for rounding
-  private static double round(double numberToRound, int decimalPlaces) {
-    return (Math.round(numberToRound * Math.pow(10, decimalPlaces))) / Math.pow(10, decimalPlaces);
   }
 }

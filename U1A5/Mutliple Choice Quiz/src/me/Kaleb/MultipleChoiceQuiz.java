@@ -48,11 +48,11 @@ public class MultipleChoiceQuiz {
   //</editor-fold>
   
   private final String[] ANSWERS = new String[] {
-          "a",
           "b",
-          "c",
+          "a",
           "d",
-          "d"
+          "b",
+          "c"
   };
   
   private int correctAnswers;

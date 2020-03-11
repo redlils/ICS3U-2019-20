@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Helpers/Helpers.iml" filepath="$PROJECT_DIR$/Helpers/Helpers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" filepath="$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" filepath="$PROJECT_DIR$/U1A1/AboutMeRedpath/U1.A1.AboutMeRedpath.iml" />
-      <module fileurl="file://$PROJECT_DIR$/U1A4/Making a Pizza/U1.A4.Making a Pizza.iml" filepath="$PROJECT_DIR$/U1A4/Making a Pizza/U1.A4.Making a Pizza.iml" />
     </modules>
   </component>
 </project>

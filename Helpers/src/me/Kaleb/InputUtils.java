@@ -9,7 +9,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class InputUtils {
-  //  Confirm selection/operation with user
+  
+  /**
+   * Asks for confirmation from user
+   *
+   * @param prompt The prompt to give the user
+   * @param reader The scanner to recieve input from
+   * @return The user's answer as a boolean
+   */
   public static boolean confirm(String prompt, Scanner reader) {
     System.out.print(prompt + " [y/n]: ");
     while (!reader.hasNext("[yY|nN]")) {
@@ -20,7 +27,15 @@ public class InputUtils {
     return reader.next().equalsIgnoreCase("y");
   }
   
-  //  Get selection from provided list
+  /**
+   * Gets a selection by the user from a list
+   *
+   * @param prompt The prompt to give the user
+   * @param reader The scanner to receive input from
+   * @param items The list of items for the user to choose from
+   * @param <T> The return type and type of list
+   * @return The selected item
+   */
   public static <T> T getSelectionFromList(String prompt, Scanner reader, List<T> items) {
 //    Create StringBuilder for better concatenation
     StringBuilder output = new StringBuilder(prompt + " [");
@@ -47,12 +62,27 @@ public class InputUtils {
     return items.get(reader.nextInt() - 1);
   }
   
-  //  Used to translate array into list for getSelectionFromList
+  /**
+   * Gets a selection by the user from a list
+   *
+   * @param prompt The prompt to give the user
+   * @param reader The scanner to receive input from
+   * @param items The list of items for the user to choose from
+   * @param <T> The return type and type of list
+   * @return The selected item
+   */
   @SafeVarargs public static <T> T getSelectionFromList(String prompt, Scanner reader, T... items) {
     return getSelectionFromList(prompt, reader, Arrays.asList(items));
   }
   
-  //  Get index from selection from list
+  /**
+   * Get the index of the user's selection in a list
+   *
+   * @param prompt The prompt to give to the user
+   * @param reader The scanner to receive input from
+   * @param items The list of items for the user to choose from
+   * @return The index of the selected item
+   */
   public static int getIndexFromSelection(String prompt, Scanner reader, List<?> items) {
 //    Create StringBuilder for better concatenation
     StringBuilder output = new StringBuilder(prompt + " [");
@@ -65,8 +95,6 @@ public class InputUtils {
               .append(item.toString())
               .append((i + 1 == items.size()) ? "]: " : ", "); // Add tuple to change concatenation if item is last in list
     }
-
-//    Print the list of items and the prompt
     System.out.print(output);
 
 //    Verify input
@@ -78,7 +106,14 @@ public class InputUtils {
     return reader.nextInt() - 1;
   }
   
-  //  Translate array into list for getIndexFromSelection
+  /**
+   * Get the index of the user's selection in a list
+   *
+   * @param prompt The prompt to give to the user
+   * @param reader The scanner to receive input from
+   * @param items The list of items for the user to choose from
+   * @return The index of the selected item
+   */
   public static int getIndexFromSelection(String prompt, Scanner reader, Object... items) {
     return getIndexFromSelection(prompt, reader, Arrays.asList(items));
   }

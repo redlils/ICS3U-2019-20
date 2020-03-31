@@ -63,7 +63,7 @@ public class Main {
     Scanner keyedInput = new Scanner(System.in);
   
     // Declare and initialize an array of doubles called marks, a double to hold the total of all values in marks[], and a double to hold average of all values in marks[]
-    double[] marks = {34.7, 54.1, 34.8, 99.6, 43.6, 43.2};
+    double[] marks = {34.7, 54.1, 34.8, 99.6, 43.6, 43.2, 65.8, 44.8, 88.6};
     double total=0;
     double average;
   
@@ -81,10 +81,8 @@ public class Main {
     }
   
     // Calculate average of all marks and store it in average variable
-    average = total/6;
-    average *= 10;
-    average = Math.round(average);
-    average /= 10;
+    average = total / marks.length;
+    average = NumberUtils.round(average, 1);
   
     // Print out average
     System.out.println("The average mark is:");

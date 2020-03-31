@@ -10,6 +10,9 @@ public class Main {
     runProgramThree();
   }
   
+  /**
+   * Function to run the first program in Remixing For Loop and Array Programs
+   */
   private static void runProgramOne() {
     // Creates Scanner for input
     Scanner keyedInput = new Scanner(System.in);
@@ -37,6 +40,9 @@ public class Main {
     System.out.println(total);
   }
   
+  /**
+   * Function to run the second program in Remixing For Loop and Array Programs
+   */
   private static void runProgramTwo() {
     // Creates Scanner for input
     Scanner keyedInput = new Scanner(System.in);
@@ -58,6 +64,9 @@ public class Main {
     System.out.println("Fourth: " + friends[3]);
   }
   
+  /**
+   * Function to run the third program in Remixing For Loop and Array Programs
+   */
   private static void runProgramThree() {
     // Creates Scanner for input
     Scanner keyedInput = new Scanner(System.in);

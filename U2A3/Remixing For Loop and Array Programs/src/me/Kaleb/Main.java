@@ -15,11 +15,11 @@ public class Main {
     Scanner keyedInput = new Scanner(System.in);
   
     // Declare and initialize the array to store inputted numbers and the total of all numbers
-    int[] numbers = new int[10];
+    int[] numbers = new int[20];
     int total = 0;
   
-    // Prompt user for ten integers to be added
-    System.out.println("Enter ten integers and they will be added together:");
+    // Prompt user for twenty integers to be added
+    System.out.println("Enter twenty integers and they will be added together:");
     for (int i = 0; i < numbers.length; i++)
     {
       // Add inputted number to numbers[]

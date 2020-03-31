@@ -41,20 +41,21 @@ public class Main {
     // Creates Scanner for input
     Scanner keyedInput = new Scanner(System.in);
   
-    // Declare and initialize an array of 10 strings called friends
-    String[] friends = new String[10];
+    // Declare and initialize an array of 5 strings called friends
+    String[] friends = new String[5];
   
-    // Prompt user for 10 names of friends
-    System.out.println("Enter the names of ten friends:");
+    // Prompt user for 5 names of friends
+    System.out.println("Enter the names of five friends:");
     for (int i = 0; i < friends.length; i++)
     {
       friends[i] = keyedInput.nextLine();
     }
   
-    // Print 4th and 7th inputted names
-    System.out.println("The fourth and seventh names listed were:");
+    // Print 2nd, 3rd and 4th inputted names
+    System.out.println("The second, third and fourth names listed were:");
+    System.out.println("Second: " + friends[1]);
+    System.out.println("Third: " + friends[2]);
     System.out.println("Fourth: " + friends[3]);
-    System.out.println("Seventh: " + friends[6]);
   }
   
   private static void runProgramThree() {

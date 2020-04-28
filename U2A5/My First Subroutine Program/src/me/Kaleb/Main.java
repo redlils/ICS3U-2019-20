@@ -151,7 +151,8 @@ public class Main {
     System.out.print("Please input the number: ");
     x = reader.nextInt();
     
-    System.out.println(x + ((x % 2 != 0 && x % 3 != 0 && x % 5 != 0 && x % 7 != 0) || (x == 1 || x == 2 || x == 3 || x == 5 || x == 7) ? " is prime!" : " is not prime."));
+    // Print if the number is prime or not using the prime() method
+    System.out.println(x + (prime(x) ? " is prime!" : " is not prime."));
   }
   
   /**
@@ -167,10 +168,22 @@ public class Main {
     System.out.println("Please enter the number you would like to find the primes up to");
     maxNumber = reader.nextInt();
     
+    // Loop through all numbers and determine if it is prime using the prime() method
     for (int i = 1; i <= maxNumber; i++) {
-      if ((i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) || (i == 1 || i == 2 || i == 3 || i == 5 || i == 7)) {
+      if (prime(i)) {
         System.out.println(i); // Only output the number if it is prime
       }
     }
+  }
+  
+  /**
+   * <p>Determine if a number is prime using the following equation:</p><br/>
+   * <code>(number % 2 != 0 && number % 3 != 0 && number % 5 != 0 && number % 7 != 0) || (number == 1 || number == 2 || number == 3 || number == 5 || number == 7)</code>
+   *
+   * @param number The number to check
+   * @return If the number is prime
+   */
+  private static boolean prime(int number) {
+    return (number % 2 != 0 && number % 3 != 0 && number % 5 != 0 && number % 7 != 0) || (number == 1 || number == 2 || number == 3 || number == 5 || number == 7);
   }
 }

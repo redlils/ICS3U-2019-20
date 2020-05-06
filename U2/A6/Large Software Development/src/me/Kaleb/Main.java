@@ -31,7 +31,7 @@ public class Main {
       commandInput = reader.nextLine();
   
       // Does the command start with the prefix
-      if (!commandInput.startsWith("!")) {
+      if (!commandInput.startsWith(Settings.prefix)) {
         // Output invalid command message and start the process over again
         System.out.println("Invalid command!");
         continue;
@@ -41,7 +41,7 @@ public class Main {
       for (Command command : commands) {
         
         // Does the current command match the inputted command?
-        if (commandInput.equalsIgnoreCase("!" + command.name)) {
+        if (commandInput.equalsIgnoreCase(Settings.prefix + command.name)) {
           // Execute the command (exit command will handle itself)
           command.execute();
           break;
@@ -54,7 +54,6 @@ public class Main {
           break;
         }
       }
-      
     }
   }
   

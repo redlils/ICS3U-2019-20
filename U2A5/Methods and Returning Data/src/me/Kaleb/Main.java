@@ -73,7 +73,7 @@ public class Main {
         parabola = parabola.convert(Parabola.ParabolaType.STANDARD);
     
         // Print converted equation
-        System.out.println("Your equation in vertex form is " + parabola);
+        System.out.println("Your equation in standard form is " + parabola);
         
       } else if (selection == 2) {
         // Selection: Convert from Standard form to Factored form
@@ -165,7 +165,7 @@ public class Main {
         parabola = parabola.convert(Parabola.ParabolaType.FACTORED);
     
         // Print converted equation
-        System.out.println("Your equation in vertex form is " + parabola);
+        System.out.println("Your equation in factored form is " + parabola);
     
       } else if (selection == 6) {
         // Selection: Find variable from Vertex form

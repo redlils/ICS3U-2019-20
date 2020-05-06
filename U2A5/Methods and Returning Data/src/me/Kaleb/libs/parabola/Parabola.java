@@ -261,13 +261,13 @@ public class Parabola {
     switch (type) {
       case STANDARD:
         // Return the equation in standard form
-        return value1 + "x^2 " + (value2 > 0 ? "+ " + value2 : "") + "x " + (value3 > 0 ? "+ " : value3);
+        return value1 + "x^2 " + (value2 > 0 ? "+ " + value2 : "") + "x " + (value3 > 0 ? "+ " + value3 : value3);
       case VERTEX:
         // Return the equation in vertex form
         return value1 + "(x " + (value2 > 0 ? "- " + value2 : "+ " + -value2) + ")^2 " + (value3 > 0 ? "+ " + value3 : value3);
       case FACTORED:
         // Return the equation in factored form
-        return value1 + "(x " + (value2 > 0 ? "- " + value2 : "+ " + -value2) + ")(x " + (value3 > 0 ? "- " : "+ " + -value3);
+        return value1 + "(x " + (value2 > 0 ? "- " + value2 : "+ " + -value2) + ")(x " + (value3 > 0 ? "- " + value3 : "+ " + -value3) + ")";
     }
     return null;
   }

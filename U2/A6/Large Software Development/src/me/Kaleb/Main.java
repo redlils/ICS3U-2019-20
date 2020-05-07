@@ -1,15 +1,28 @@
 package me.Kaleb;
 
 import me.Kaleb.commands.Command;
+import me.Kaleb.commands.HelpCommand;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ *  Main class for the "<b>Large Software Development</b>" assignment for <b>U2A6</b> of the <b>ICS3U</b> course.
+ */
 public class Main {
   
-  private static final List<Command> commands = new ArrayList<>();
+  /**
+   * The list of registered commands
+   * @see #registerCommands()
+   */
+  public static final List<Command> commands = new ArrayList<>();
   
+  /**
+   * The main entry point of the program
+   *
+   * @param args Arguments provided by the executor
+   */
   public static void main(String[] args) {
     // Create variables needed for the program
     Scanner reader = new Scanner(System.in);
@@ -57,6 +70,10 @@ public class Main {
     }
   }
   
+  /**
+   * Function used to register every {@link me.Kaleb.commands.Command}
+   * @see #commands
+   */
   private static void registerCommands() {
   
   }

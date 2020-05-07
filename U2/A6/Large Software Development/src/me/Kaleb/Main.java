@@ -1,5 +1,6 @@
 package me.Kaleb;
 
+import me.Kaleb.Settings.Setting;
 import me.Kaleb.commands.Command;
 import me.Kaleb.commands.HelpCommand;
 
@@ -29,6 +30,9 @@ public class Main {
     
     String commandInput;
     
+    // Register settings
+    registerSettings();
+    
     // Register commands
     registerCommands();
     
@@ -44,7 +48,7 @@ public class Main {
       commandInput = reader.nextLine();
   
       // Does the command start with the prefix
-      if (!commandInput.startsWith("!")) {
+      if (!commandInput.startsWith((String) Settings.getSetting("prefix").getValue())) {
         // Output invalid command message and start the process over again
         System.out.println("Invalid command!");
         continue;
@@ -54,7 +58,7 @@ public class Main {
       for (Command command : commands) {
         
         // Does the current command match the inputted command?
-        if (commandInput.equalsIgnoreCase("!" + command.name)) {
+        if (commandInput.equalsIgnoreCase(Settings.getSetting("prefix").getValue() + command.name)) {
           // Execute the command (exit command will handle itself)
           command.execute();
           break;
@@ -71,10 +75,20 @@ public class Main {
   }
   
   /**
+   * Functions used to register every {@link Setting}
+   * @see Settings#settings
+   * @see Setting
+   */
+  private static void registerSettings() {
+    new Setting<>("prefix", "!");
+  }
+  
+  /**
    * Function used to register every {@link me.Kaleb.commands.Command}
    * @see #commands
+   * @see Command
    */
   private static void registerCommands() {
-    commands.add(new HelpCommand());
+    new HelpCommand();
   }
 }

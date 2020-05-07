@@ -1,6 +1,7 @@
 package me.Kaleb.commands;
 
 import me.Kaleb.Main;
+import me.Kaleb.Settings;
 
 public class HelpCommand extends Command{
   
@@ -12,7 +13,7 @@ public class HelpCommand extends Command{
   public void execute() {
     System.out.println("Here are all of the commands:");
     for (Command command : Main.commands) {
-      System.out.println("!" + command.name);
+      System.out.println(Settings.getSetting("prefix").getValue() + command.name);
     }
   }
 }

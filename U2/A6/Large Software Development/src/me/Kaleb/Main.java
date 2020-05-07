@@ -75,6 +75,6 @@ public class Main {
    * @see #commands
    */
   private static void registerCommands() {
-  
+    commands.add(new HelpCommand());
   }
 }

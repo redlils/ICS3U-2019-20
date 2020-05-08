@@ -46,7 +46,7 @@ public class Main {
     //noinspection InfiniteLoopStatement
     while (true) {
       // Prompt for command
-      System.out.print("Please enter a command (you can type " + Settings.getSetting("prefix") + "help to get a list of commands): ");
+      System.out.print("Please enter a command (you can type " + Settings.getSetting("prefix").getValue() + "help to get a list of commands): ");
       
       // Get command from input
       commandInput = reader.nextLine();

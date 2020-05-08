@@ -43,6 +43,7 @@ public class Main {
     System.out.println("welcome message");
     
     // Infinite loop
+    //noinspection InfiniteLoopStatement
     while (true) {
       // Prompt for command
       System.out.print("Please enter a command (you can type " + Settings.getSetting("prefix") + "help to get a list of commands): ");

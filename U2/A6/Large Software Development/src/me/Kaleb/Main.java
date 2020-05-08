@@ -1,8 +1,10 @@
 package me.Kaleb;
 
-import me.Kaleb.Settings.Setting;
 import me.Kaleb.commands.Command;
 import me.Kaleb.commands.HelpCommand;
+import me.Kaleb.commands.SettingsCommand;
+import me.Kaleb.settings.Setting;
+import me.Kaleb.settings.StringSetting;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +82,7 @@ public class Main {
    * @see Setting
    */
   private static void registerSettings() {
-    new Setting<>("prefix", "!");
+    new StringSetting("prefix", "!");
   }
   
   /**

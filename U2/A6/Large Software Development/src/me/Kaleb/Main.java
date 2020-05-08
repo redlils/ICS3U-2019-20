@@ -1,9 +1,6 @@
 package me.Kaleb;
 
-import me.Kaleb.commands.Command;
-import me.Kaleb.commands.ExitCommand;
-import me.Kaleb.commands.HelpCommand;
-import me.Kaleb.commands.SettingsCommand;
+import me.Kaleb.commands.*;
 import me.Kaleb.settings.Setting;
 import me.Kaleb.settings.StringSetting;
 
@@ -94,6 +91,7 @@ public class Main {
    */
   private static void registerCommands() {
     new HelpCommand();
+    new RollCommand();
     new SettingsCommand();
     new ExitCommand();
   }

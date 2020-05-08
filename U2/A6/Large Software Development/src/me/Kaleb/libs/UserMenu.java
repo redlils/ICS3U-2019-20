@@ -58,7 +58,7 @@ public class UserMenu {
     if (options.size() > 9) {
       regex += "9]|1[0-" + (options.size() % 10) + "])\\b";
     } else {
-      regex += "9[)\\b";
+      regex += "9])\\b";
     }
     
     // Print the menu

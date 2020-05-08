@@ -11,6 +11,11 @@ public class StringSetting extends Setting<String> {
     super(name, value);
   }
   
+  /**
+   * Set the value of the setting via {@link String} input
+   *
+   * @param value The value to set
+   */
   @Override
   public void setValue(String value) {
     this.value = value;

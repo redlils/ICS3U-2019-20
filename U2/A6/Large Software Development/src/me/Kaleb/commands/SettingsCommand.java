@@ -8,10 +8,16 @@ import java.util.Scanner;
 
 public class SettingsCommand extends Command {
   
+  /**
+   * Constructor
+   */
   public SettingsCommand() {
     super("settings");
   }
   
+  /**
+   * Function called when the command is entered
+   */
   @Override
   public void execute() {
     Scanner reader = new Scanner(System.in);

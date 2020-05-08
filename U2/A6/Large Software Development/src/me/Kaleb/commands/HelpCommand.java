@@ -5,10 +5,16 @@ import me.Kaleb.Settings;
 
 public class HelpCommand extends Command{
   
+  /**
+   * Constructor
+   */
   public HelpCommand() {
     super("help");
   }
   
+  /**
+   * Function called when the command is entered
+   */
   @Override
   public void execute() {
     System.out.println("Here are all of the commands:");

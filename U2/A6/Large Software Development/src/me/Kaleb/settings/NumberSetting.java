@@ -12,6 +12,12 @@ public class NumberSetting extends Setting<Number> {
     super(name, value);
   }
   
+  /**
+   * Set the value of the setting via {@link String} input
+   *
+   * @param value The value to set
+   */
+  @Override
   public void setValue(String value) {
     this.value = Double.parseDouble(value);
   }

@@ -92,5 +92,6 @@ public class Main {
    */
   private static void registerCommands() {
     new HelpCommand();
+    new SettingsCommand();
   }
 }

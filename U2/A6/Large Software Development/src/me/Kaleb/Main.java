@@ -37,7 +37,7 @@ public class Main {
     registerCommands();
     
     // Output welcome message
-    System.out.println("welcome message");
+    System.out.println("Welcome to Kaleb's command program!");
     
     // Infinite loop
     //noinspection InfiniteLoopStatement
@@ -71,6 +71,7 @@ public class Main {
           command.execute(commandArgs);
           break;
         }
+        
         // Variable to check outside of loop if the command was executed with its alias
         boolean aliasFound = false;
         for (String alias :

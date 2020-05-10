@@ -61,8 +61,10 @@ public class Main {
         // Does the current command match the inputted command?
         if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + command.name)) {
           String[] rawCommandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + command.name.length()).split(" +");
+          
           String[] commandArgs = new String[rawCommandArgs.length - 1];
           System.arraycopy(rawCommandArgs, 1, commandArgs, 0, rawCommandArgs.length - 1);
+          
           // Execute the command (exit command will handle itself)
           command.execute(commandArgs);
           break;
@@ -71,10 +73,17 @@ public class Main {
         for (String alias :
                 command.aliases) {
           if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + alias)) {
-            String[] commandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + alias.length()).split(" +");
+            // Get the raw arguments from the command
+            String[] rawCommandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + alias.length()).split(" +");
+  
+            // Parse the arguments correctly with System.arraycopy
+            String[] commandArgs = new String[rawCommandArgs.length - 1];
+            System.arraycopy(rawCommandArgs, 1, commandArgs, 0, rawCommandArgs.length - 1);
+  
             // Execute the command (exit command will handle itself)
             command.execute(commandArgs);
             aliasFound = true;
+            break;
           }
         }
         

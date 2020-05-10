@@ -24,9 +24,30 @@ public class HelpCommand extends Command{
    */
   @Override
   public void execute(String[] args) {
-    System.out.println("Here are all of the commands:");
-    for (Command command : Main.commands) {
-      System.out.println(Settings.getSetting("prefix").getValue() + command.name);
+    if (args.length == 0) {
+      System.out.println("Here are all of the commands:");
+      for (Command command : Main.commands) {
+        System.out.println(Settings.getSetting("prefix").getValue() + command.name);
+      }
+      return;
+    }
+  
+    for (Command command :
+            Main.commands) {
+      if (args[0].equalsIgnoreCase(command.name)) {
+        System.out.println(Settings.getSetting("prefix").getValue() + command.name);
+        System.out.println("-----------------------------");
+        System.out.println("Description");
+        System.out.println(command.description);
+        System.out.println();
+        System.out.println("Usage");
+        System.out.println(Settings.getSetting("prefix").getValue() + command.usage);
+        System.out.println();
+        System.out.println("Aliases");
+        String argsString = Arrays.toString(command.aliases.toArray());
+        System.out.println(argsString.substring(1, argsString.length() - 1));
+        System.out.println("-----------------------------");
+      }
     }
   }
 }

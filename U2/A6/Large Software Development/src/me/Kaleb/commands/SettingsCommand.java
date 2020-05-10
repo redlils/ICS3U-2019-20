@@ -4,15 +4,19 @@ import me.Kaleb.libs.UserMenuBuilder;
 import me.Kaleb.settings.Setting;
 import me.Kaleb.Settings;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Command to change a specified setting
+ */
 public class SettingsCommand extends Command {
   
   /**
    * Constructor
    */
   public SettingsCommand() {
-    super("settings");
+    super("settings", Arrays.asList("config", "options", "s"), "Changes a specified setting", "settings");
   }
   
   /**

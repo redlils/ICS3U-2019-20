@@ -2,15 +2,19 @@ package me.Kaleb.commands;
 
 import me.Kaleb.InputUtils;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Command used to exit the program
+ */
 public class ExitCommand extends Command {
   
   /**
    * Constructor
    */
   public ExitCommand() {
-    super("exit");
+    super("exit", Arrays.asList("e"), "Used to exit the program", "exit");
   }
   
   /**

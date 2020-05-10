@@ -3,13 +3,18 @@ package me.Kaleb.commands;
 import me.Kaleb.Main;
 import me.Kaleb.Settings;
 
+import java.util.Arrays;
+
+/**
+ * Command to show a list of all commands or get detailed info on a command
+ */
 public class HelpCommand extends Command{
   
   /**
    * Constructor
    */
   public HelpCommand() {
-    super("help");
+    super("help", Arrays.asList("?", "h"), "Show a list of all commands or get detailed info on a command", "help [command]");
   }
   
   /**

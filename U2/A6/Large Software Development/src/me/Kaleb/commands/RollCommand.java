@@ -2,9 +2,13 @@ package me.Kaleb.commands;
 
 import me.Kaleb.NumberUtils;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Command to roll a die and try to guess what the result will be
+ */
 public class RollCommand extends Command {
   
   private int correct;
@@ -14,7 +18,7 @@ public class RollCommand extends Command {
    * Constructor
    */
   public RollCommand() {
-    super("roll");
+    super("roll", Arrays.asList("r"), "Roll a die and try to guess what the result will be.", "roll");
   }
   
   /**

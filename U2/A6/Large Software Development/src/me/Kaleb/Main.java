@@ -59,11 +59,22 @@ public class Main {
       for (Command command : commands) {
         
         // Does the current command match the inputted command?
-        if (commandInput.equalsIgnoreCase(Settings.getSetting("prefix").getValue() + command.name)) {
+        if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + command.name)) {
           // Execute the command (exit command will handle itself)
           command.execute();
           break;
         }
+        boolean aliasFound = false;
+        for (String alias :
+                command.aliases) {
+          if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + alias)) {
+            // Execute the command (exit command will handle itself)
+            command.execute();
+            aliasFound = true;
+          }
+        }
+        
+        if (aliasFound) break;
         
         // Is this the last item in the list?
         if (commands.size() - 1 == commands.indexOf(command)) {

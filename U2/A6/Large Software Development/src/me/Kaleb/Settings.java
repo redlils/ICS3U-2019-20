@@ -22,11 +22,14 @@ public class Settings {
    * @return The {@link Setting} that was found
    */
   public static Setting<?> getSetting(String name) {
+    // Loop through all of the settings
     for (Setting<?> setting : settings) {
       if (setting.getName().equalsIgnoreCase(name)) {
+        // Return the current setting if the name matches the one passed through the "name" argument
         return setting;
       }
     }
+    // Return null if no setting was found with the name passed through the "name" argument
     return null;
   }
 }

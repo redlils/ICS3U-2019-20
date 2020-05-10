@@ -1,5 +1,8 @@
 package me.Kaleb.settings;
 
+/**
+ * Represents a setting with a String value
+ */
 public class StringSetting extends Setting<String> {
   /**
    * Constructor

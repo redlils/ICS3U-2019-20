@@ -1,5 +1,8 @@
 package me.Kaleb.settings;
 
+/**
+ * Represents a setting with a numerical value
+ */
 public class NumberSetting extends Setting<Number> {
   
   /**

@@ -24,7 +24,9 @@ public class HelpCommand extends Command{
    */
   @Override
   public void execute(String[] args) {
+    // Check if any commands were passed in
     if (args.length == 0) {
+      // Print all of the commands
       System.out.println("Here are all of the commands:");
       for (Command command : Main.commands) {
         System.out.println(Settings.getSetting("prefix").getValue() + command.name);
@@ -32,8 +34,10 @@ public class HelpCommand extends Command{
       return;
     }
   
+    // Loop through every command
     for (Command command :
             Main.commands) {
+      // If the command passed through the arguments is equal to the current command, output information about the command
       if (args[0].equalsIgnoreCase(command.name)) {
         System.out.println(Settings.getSetting("prefix").getValue() + command.name);
         System.out.println("-----------------------------");
@@ -51,6 +55,7 @@ public class HelpCommand extends Command{
       }
     }
     
+    // This message will only be reached if the command passed through the arguments was not found
     System.out.println("One or more of your arguments are incorrect! Please try again!");
   }
 }

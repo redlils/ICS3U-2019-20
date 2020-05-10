@@ -60,8 +60,10 @@ public class Main {
         
         // Does the current command match the inputted command?
         if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + command.name)) {
+          // Get the raw arguments from the command
           String[] rawCommandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + command.name.length()).split(" +");
           
+          // Parse the arguments correctly with System.arraycopy
           String[] commandArgs = new String[rawCommandArgs.length - 1];
           System.arraycopy(rawCommandArgs, 1, commandArgs, 0, rawCommandArgs.length - 1);
           
@@ -69,6 +71,7 @@ public class Main {
           command.execute(commandArgs);
           break;
         }
+        // Variable to check outside of loop if the command was executed with its alias
         boolean aliasFound = false;
         for (String alias :
                 command.aliases) {
@@ -87,6 +90,7 @@ public class Main {
           }
         }
         
+        // If the command was executed with its alias, break out of the current loop and start over
         if (aliasFound) break;
         
         // Is this the last item in the list?

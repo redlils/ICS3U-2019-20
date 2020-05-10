@@ -26,6 +26,7 @@ public class SettingsCommand extends Command {
    */
   @Override
   public void execute(String[] args) {
+    // Create a user menu with all of the settings
     Scanner reader = new Scanner(System.in);
     UserMenuBuilder settingsMenuBuilder = new UserMenuBuilder()
             .setTitle("Modify a Setting")
@@ -33,9 +34,12 @@ public class SettingsCommand extends Command {
     for (Setting<?> setting : Settings.settings) {
       settingsMenuBuilder.addOption(setting.getName());
     }
+    
+    // Get the user to select a setting
     int settingSelection = settingsMenuBuilder.build().present();
     Setting<?> setting = Settings.settings.get(settingSelection);
   
+    // Get input from the user to change the setting
     System.out.print("Please enter a new value for " + setting.getName() + ": ");
     setting.setValue(reader.nextLine());
     System.out.println("The setting " + setting.getName() + " now has a value of " + setting.getValue() + "!");

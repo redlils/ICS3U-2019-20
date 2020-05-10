@@ -24,6 +24,7 @@ public class ExitCommand extends Command {
    */
   @Override
   public void execute(String[] args) {
+    // Confirm if the user would like to exit out of the program
     Scanner reader = new Scanner(System.in);
     boolean exit = InputUtils.confirm("Are you sure you wish to exit?", reader);
     if (exit) {

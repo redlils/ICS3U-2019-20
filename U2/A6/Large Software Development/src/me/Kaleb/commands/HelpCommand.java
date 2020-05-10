@@ -47,7 +47,10 @@ public class HelpCommand extends Command{
         String argsString = Arrays.toString(command.aliases.toArray());
         System.out.println(argsString.substring(1, argsString.length() - 1));
         System.out.println("-----------------------------");
+        return;
       }
     }
+    
+    System.out.println("One or more of your arguments are incorrect! Please try again!");
   }
 }

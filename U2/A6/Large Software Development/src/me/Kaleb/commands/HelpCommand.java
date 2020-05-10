@@ -19,9 +19,11 @@ public class HelpCommand extends Command{
   
   /**
    * Function called when the command is entered
+   *
+   * @param args The arguments passed to the command
    */
   @Override
-  public void execute() {
+  public void execute(String[] args) {
     System.out.println("Here are all of the commands:");
     for (Command command : Main.commands) {
       System.out.println(Settings.getSetting("prefix").getValue() + command.name);

@@ -60,16 +60,18 @@ public class Main {
         
         // Does the current command match the inputted command?
         if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + command.name)) {
+          String[] commandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + command.name.length()).split(" +");
           // Execute the command (exit command will handle itself)
-          command.execute();
+          command.execute(commandArgs);
           break;
         }
         boolean aliasFound = false;
         for (String alias :
                 command.aliases) {
           if (commandInput.startsWith(Settings.getSetting("prefix").getValue() + alias)) {
+            String[] commandArgs = commandInput.substring(((String) Settings.getSetting("prefix").getValue()).length() + alias.length()).split(" +");
             // Execute the command (exit command will handle itself)
-            command.execute();
+            command.execute(commandArgs);
             aliasFound = true;
           }
         }

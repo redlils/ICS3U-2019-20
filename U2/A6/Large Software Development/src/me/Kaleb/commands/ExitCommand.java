@@ -19,9 +19,11 @@ public class ExitCommand extends Command {
   
   /**
    * Function called when the command is entered
+   *
+   * @param args The arguments passed to the command
    */
   @Override
-  public void execute() {
+  public void execute(String[] args) {
     Scanner reader = new Scanner(System.in);
     boolean exit = InputUtils.confirm("Are you sure you wish to exit?", reader);
     if (exit) {

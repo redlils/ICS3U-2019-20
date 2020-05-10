@@ -46,6 +46,7 @@ public abstract class Command {
   
   /**
    * Function called when the command is entered
+   * @param args The arguments passed to the command
    */
-  public abstract void execute();
+  public abstract void execute(String[] args);
 }

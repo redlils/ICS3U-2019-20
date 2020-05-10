@@ -21,9 +21,11 @@ public class SettingsCommand extends Command {
   
   /**
    * Function called when the command is entered
+   *
+   * @param args The arguments passed to the command
    */
   @Override
-  public void execute() {
+  public void execute(String[] args) {
     Scanner reader = new Scanner(System.in);
     UserMenuBuilder settingsMenuBuilder = new UserMenuBuilder()
             .setTitle("Modify a Setting")

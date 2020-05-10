@@ -23,9 +23,11 @@ public class RollCommand extends Command {
   
   /**
    * Function called when the command is entered
+   *
+   * @param args The arguments passed to the command
    */
   @Override
-  public void execute() {
+  public void execute(String[] args) {
     Scanner reader = new Scanner(System.in);
     System.out.print("Please enter what you think your next roll will be: ");
     

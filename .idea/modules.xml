@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Helpers/Helpers.iml" filepath="$PROJECT_DIR$/Helpers/Helpers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" filepath="$PROJECT_DIR$/.idea/ICS3U-2019-20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U3/A3/Encryption Program/U3.A3.Encryption Program.iml" filepath="$PROJECT_DIR$/U3/A3/Encryption Program/U3.A3.Encryption Program.iml" />
       <module fileurl="file://$PROJECT_DIR$/U3/A3/Type Casting/U3.A3.Type Casting.iml" filepath="$PROJECT_DIR$/U3/A3/Type Casting/U3.A3.Type Casting.iml" />
     </modules>
   </component>
